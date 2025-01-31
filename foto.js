@@ -3,10 +3,10 @@
 const endpoint = `https://lanciweb.github.io/demo/api/pictures/`
 const methodFetch = {method: `GET`}
 
-const row = document.querySelector(`row`)
+const row = document.querySelector(`.row`)
 
 fetch(endpoint, methodFetch )
-.then(resposse => response.json() )
+.then(response => response.json() )
 .then( data =>{
     console.log(data)
 
@@ -16,9 +16,10 @@ fetch(endpoint, methodFetch )
         const {date, id, title, url,} = element 
 
         
-        row.innerHTML =
+        row.innerHTML +=
         `
-        <div class="card p-3 position-reative">
+            <div class="col-ms-12 col-md-6 col-lg-4">
+                <div class="card my-5 p-3 position-reative">
                     <img src="./img/pin.svg" class="position-absolute top-0 start-50 translate-middle" alt="">
                     <img class="card-omg-top" src='${url}' alt='${title}'>
                     <div class="card-body">
@@ -26,6 +27,7 @@ fetch(endpoint, methodFetch )
                         <h3 class="card-text text-uppercase">${title}</h3>
                     </div>
                 </div>
+            </div>
         `
     });
 

@@ -19,7 +19,7 @@ h1{
     font-family: "Edu Tas Beginner", sans-serif;
 }
 main{
-    min-height: 80vh;
+    /* min-height: 80vh; */
     background-image: url(/img/cork.png);
 }
 
@@ -34,7 +34,9 @@ main{
     transform: rotate(20deg); 
     
 }
-a.card-img-top:hover{}
+a.card-img-top:hover{
+    
+}
 a.card-img-top:active{
     font-size: 150%;
 }
