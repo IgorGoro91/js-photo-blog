@@ -23,20 +23,30 @@ main{
     background-image: url(/img/cork.png);
 }
 
-.img-container{
-    
-    overflow: hidden;
-
-}
-
-
 .card:hover{
-    transform: rotate(20deg); 
-    
+    transform: scale(1.2) rotate(20deg); 
+    z-index: 1;
 }
-a.card-img-top:hover{
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
     
+    align-items: center;
+    justify-content: center;
 }
-a.card-img-top:active{
-    font-size: 150%;
+.overlay img{
+    width: 50%;
+}
+
+button{
+    margin: 30px;
+    font-size: 30px;
 }
